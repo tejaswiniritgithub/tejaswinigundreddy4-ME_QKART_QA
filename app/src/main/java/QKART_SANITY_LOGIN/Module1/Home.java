@@ -154,13 +154,20 @@ public class Home {
      */
     public Boolean verifyCartContents(List<String> expectedCartContents) {
         try {
-            // TODO: CRIO_TASK_MODULE_TEST_AUTOMATION - TEST CASE 07: MILESTONE 6
+            WebElement cartParent = driver.findElement(By.className("cart"));
+            List<WebElement> cartContents = cartParent.findElements(By.className("css-zgtx0t"));
 
-            // Get all the cart items as an array of webelements
+            ArrayList<String> actualCartContents = new ArrayList<String>() {
+            };
+            for (WebElement cartItem : cartContents) {
+                actualCartContents.add(cartItem.findElement(By.className("css-1gjj37g")).getText().split("\n")[0]);
+            }
 
-            // Iterate through expectedCartContents and check if item with matching product
-            // name is present in the cart
-
+            for (String expected : expectedCartContents) {
+                if (!actualCartContents.contains(expected)) {
+                    return false;
+                }
+            }
 
             return true;
 

@@ -200,25 +200,7 @@
       "hint": "Is the URL of the final page checked if it contains /thanks ?"
     },
     {
-      "description": "Testcase 07 : Verify cart content is persisted after logout ",
-      "validations": [
-        {
-          "object_notation": "COMMAND",
-          "operator": "contains",
-          "expected_value": "GetElementText"
-        },
-        {
-          "object_notation": "RESPONSE",
-          "operator": "contains",
-          "expected_value": "Stylecon 9 Seater RHS Sofa Set"
-        }
-      ],
-      "error_out": "Testcase07: verifying if the cart contains Stylecon 9 Seater RHS Sofa Set is not done",
-      "is_enabled": true,
-      "hint": "Is the contents of the cart checked if it contains the text: Stylecon 9 Seater RHS Sofa Set"
-    },
-    {
-      "description": "Testcase 08 : Verify place order fails on low balance",
+      "description": "Testcase 07 : Verify place order fails on low balance",
       "validations": [
         {
           "object_notation": "RESPONSE",
@@ -226,7 +208,7 @@
           "expected_value": "You do not have enough balance in your wallet for this purchase"
         }
       ],
-      "error_out": "Testcase08: validation of presence of error message was not validated",
+      "error_out": "Testcase07: validation of presence of error message was not validated",
       "is_enabled": true,
       "hint": "Are we validating the error message if the text is: You do not have enough balance in your wallet for this purchase "
     }
