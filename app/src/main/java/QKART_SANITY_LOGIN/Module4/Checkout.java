@@ -60,7 +60,6 @@ public class Checkout {
     /*
      * Return Boolean denoting the status of selecting an available address
      */
-    // TODO: CRIO_TASK_MODULE_XPATH - M1_3 Update Xpath to fix the error
     public Boolean selectAddress(String addressToSelect) {
         try {
             /*
@@ -89,7 +88,7 @@ public class Checkout {
     /*
      * Return Boolean denoting the status of place order action
      */
-    // TODO: CRIO_TASK_MODULE_XPATH - M2_2 Update locators to use Xpath
+    // TODO: CRIO_TASK_MODULE_XPATH - M1_2 Update locators to use Xpath
     public Boolean placeOrder() {
         try {
             // Find the "PLACE ORDER" button and click on it

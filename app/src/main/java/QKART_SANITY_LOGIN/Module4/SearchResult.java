@@ -33,7 +33,7 @@ public class SearchResult {
     /*
      * Return Boolean denoting if the open size chart operation was successful
      */
-    // TODO: CRIO_TASK_MODULE_XPATH - M2_3 Update locators to use Xpath
+    // TODO: CRIO_TASK_MODULE_XPATH - M1_3 Update locators to use Xpath
     public Boolean openSizechart() {
         try {
             // Find the link of size chart in the parentElement and click on it

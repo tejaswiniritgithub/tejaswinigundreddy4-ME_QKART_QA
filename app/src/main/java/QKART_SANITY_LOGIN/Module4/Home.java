@@ -43,7 +43,6 @@ public class Home {
      * Returns Boolean if searching for the given product name occurs without any
      * errors
      */
-    // TODO: CRIO_TASK_MODULE_XPATH - M1_1 Update locator using Dynamic Xpath to fix the error
     public Boolean searchForProduct(String product) {
         try {
             // Clear the contents of the search box and Enter the product name in the search
@@ -84,7 +83,6 @@ public class Home {
     /*
      * Returns Boolean based on if the "No products found" text is displayed
      */
-    // TODO: CRIO_TASK_MODULE_XPATH - M1_2 Update Xpath to fix the error
     public Boolean isNoResultFound() {
         Boolean status = false;
         try {
@@ -208,7 +206,7 @@ public class Home {
     /*
      * Return Boolean denoting if the cart contains items as expected
      */
-    // TODO: CRIO_TASK_MODULE_XPATH - M2_1 Update locators to use Xpath
+    // TODO: CRIO_TASK_MODULE_XPATH - M1_1 Update locators to use Xpath
     public Boolean verifyCartContents(List<String> expectedCartContents) {
         try {
             // Get all the cart items as an array of webelements
