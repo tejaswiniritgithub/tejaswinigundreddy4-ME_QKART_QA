@@ -50,10 +50,10 @@ public class Home {
             WebElement searchBox = driver.findElement(By.xpath("//input[@name='search'][1]"));
             searchBox.clear();
             searchBox.sendKeys(product);
-
+            // TODO: CRIO_TASK_MODULE_XPATH - M0 Fix broken Xpath
             WebDriverWait wait = new WebDriverWait(driver,30);
-            wait.until(ExpectedConditions.or(ExpectedConditions.textToBePresentInElementLocated(By.className("css-yg30e6"), product),
-            ExpectedConditions.presenceOfElementLocated(By.xpath("//*[@id=\"root\"]/div/div/div[3]/div[1]/div[2]/div/div/div[1]/p[1]"))));
+            wait.until(ExpectedConditions.or(ExpectedConditions.textToBePresentInElementLocated(By.className("css-yg30ev6"), product),
+            ExpectedConditions.presenceOfElementLocated(By.xpath("//*[@id=\"root\"]/div/div[3]/div[1]/div[2]/div/h4"))));
             Thread.sleep(3000);
             return true;
         } catch (Exception e) {
