@@ -428,26 +428,26 @@ public class QkartSanity {
         return status;
     }
 
-    public static Boolean TestCase09(RemoteWebDriver driver) throws InterruptedException {
+    public static Boolean TestCase08(RemoteWebDriver driver) throws InterruptedException {
         Boolean status = false;
 
         // TODO: CRIO_TASK_MODULE_SYNCHRONISATION -
+        return status;
+    }
+
+    public static Boolean TestCase9(RemoteWebDriver driver) throws InterruptedException {
+        // TODO: CRIO_TASK_MODULE_SYNCHRONISATION -
+        Boolean status = false;
         return status;
     }
 
     public static Boolean TestCase10(RemoteWebDriver driver) throws InterruptedException {
-        // TODO: CRIO_TASK_MODULE_SYNCHRONISATION -
         Boolean status = false;
+        // TODO: CRIO_TASK_MODULE_SYNCHRONISATION -
         return status;
     }
 
     public static Boolean TestCase11(RemoteWebDriver driver) throws InterruptedException {
-        Boolean status = false;
-        // TODO: CRIO_TASK_MODULE_SYNCHRONISATION -
-        return status;
-    }
-
-    public static Boolean TestCase12(RemoteWebDriver driver) throws InterruptedException {
         Boolean status = false;
         // TODO: CRIO_TASK_MODULE_SYNCHRONISATION -
         return status;
@@ -525,6 +525,15 @@ public class QkartSanity {
             // System.out.println("");
 
 
+            // Execute Test Case 8
+            // totalTests += 1;
+            // status = TestCase08(driver);
+            // if (status) {
+            // passedTests += 1;
+            // }
+
+            // System.out.println("");
+
             // Execute Test Case 9
             // totalTests += 1;
             // status = TestCase09(driver);
@@ -546,15 +555,6 @@ public class QkartSanity {
             // Execute Test Case 11
             // totalTests += 1;
             // status = TestCase11(driver);
-            // if (status) {
-            // passedTests += 1;
-            // }
-
-            // System.out.println("");
-
-            // Execute Test Case 12
-            // totalTests += 1;
-            // status = TestCase12(driver);
             // if (status) {
             // passedTests += 1;
             // }
