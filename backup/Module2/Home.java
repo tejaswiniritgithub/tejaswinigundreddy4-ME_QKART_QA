@@ -7,8 +7,6 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.remote.RemoteWebDriver;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class Home {
     RemoteWebDriver driver;
@@ -52,14 +50,7 @@ public class Home {
             WebElement searchbox = driver.findElement(By.xpath("(//input[@name='search'])[1]"));
             searchbox.clear();
             searchbox.sendKeys(product);
-            //stmt_9 wait for search to complete
-            //Thread.sleep(3000);
-            WebDriverWait wait = new WebDriverWait(driver, 3);
-            wait.until(ExpectedConditions.or(
-                    ExpectedConditions.visibilityOfElementLocated(
-                            By.xpath("//h4[text()=' No products found ']")),
-                    ExpectedConditions.presenceOfAllElementsLocatedBy(
-                            By.xpath("//div[@class='MuiCardContent-root css-1qw96cp']"))));
+            Thread.sleep(3000);
 
             return true;
         } catch (Exception e) {
@@ -193,21 +184,12 @@ public class Home {
                        if (quantity > actualQuantity) {
                             WebElement plusButton = parentElement.findElement(By.xpath(".//*[@data-testid='AddOutlinedIcon']"));
                             plusButton.click();
-                            //SLEEP_STMNT11:Wait for Quantity to be updated
-                            
-                            WebDriverWait wait = new WebDriverWait(driver, 2);
-                            wait.until(ExpectedConditions.textToBePresentInElement(parentElement.
-                            findElement(By.xpath(".//div[@data-testid='item-qty']")),String.valueOf(actualQuantity+1)));
+                            Thread.sleep(2000);
                       
                         }  else if (quantity<actualQuantity){
                             WebElement minusButton = parentElement.findElement(By.xpath(".//*[@data-testid='RemoveOutlinedIcon']"));
                             minusButton.click();
-                             //SLEEP_STMNT11:Wait for Quantity to be updated
-
-                            
-                            WebDriverWait wait = new WebDriverWait(driver, 2);
-                            wait.until(ExpectedConditions.textToBePresentInElement(parentElement.
-                            findElement(By.xpath(".//div[@data-testid='item-qty']")),String.valueOf(actualQuantity-1)));
+                            Thread.sleep(2000);
 
                         } else if(quantity == actualQuantity){
                             break;
