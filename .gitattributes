@@ -23,4 +23,6 @@ assesment/** merge=copy-merge
 gradle/** merge=copy-merge
 
 # app/
-app/build.gradle merge=copy-merge
+app/build.gradle merge=copy-merg
+
+
