@@ -406,7 +406,9 @@ public class QkartSanity {
     public static void main(String[] args) throws InterruptedException, MalformedURLException {
         int totalTests = 0;
         int passedTests = 0;
+       
         Boolean status;
+        RemoteWebDriver driver = createDriver();
         driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 

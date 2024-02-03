@@ -40,7 +40,8 @@ test.dependsOn startScript
 
 test {
     useTestNG() {
-        useDefaultListeners = true
+        suites 'src/test/java/QKART_TESTNG/testng.xml'
+       useDefaultListeners = true
     }
 
     afterSuite { desc, result ->
@@ -66,4 +67,4 @@ test {
 
 }
 
-mainClassName = 'QKART_SANITY_LOGIN.Module1.QkartSanity'
+mainClassName = 'QKART_SANITY_LOGIN.Module4.QkartSanityV2'

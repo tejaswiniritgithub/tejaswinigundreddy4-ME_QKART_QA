@@ -49,7 +49,7 @@ public class Login {
         FluentWait<WebDriver> wait = new FluentWait<WebDriver>(driver).withTimeout(Duration.ofSeconds(30))
                 .pollingEvery(Duration.ofMillis(600)).ignoring(NoSuchElementException.class);
         wait.until(ExpectedConditions.invisibilityOf(login_button));
-
+        Thread.sleep(2000);
         return this.VerifyUserLoggedIn(Username);
     }
 
